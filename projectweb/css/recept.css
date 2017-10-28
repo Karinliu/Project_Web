@@ -1,0 +1,322 @@
+html {
+    margin-right: 1em;
+    font-family: "lato", "open sans", "arial", "verdana", sans-serif;
+}
+
+body {
+    background-image: url(../images/mobilerecept.gif);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: right 5.5em;
+    font-family: "lato", "open sans", "arial", "verdana", sans-serif;
+    background-attachment: scroll;
+    background-color: #F2F2F2;
+    margin-right: -1em;
+}
+
+
+/*HEADER*/
+
+header {
+    margin-top: -1.5em;
+    margin-left: -2em;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    box-shadow: 0 0.1em 1em 0;
+}
+
+header form input {
+    -webkit-appearance: none;
+    box-sizing: border-box;
+    background-image: url(../images/zoeken.png);
+    background-size: 3.5em;
+    background-repeat: no-repeat;
+    border: solid #00d867 0.2em;
+    padding: 1em 2em 1em;
+    border-radius: 3em;
+    transition: all .3s;
+    width: 1em;
+    position: absolute;
+    margin-left: 7em;
+    margin-top: 1em;
+    top: 0;
+    left: 0;
+}
+
+header form input:focus {
+    width: 11em;
+    padding: 1em 3em 1em;
+}
+
+header nav {
+    width: 100%;
+    height: 6em;
+    margin-bottom: -1em;
+}
+
+header nav ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+
+header nav ul li {
+    width: 100%;
+}
+
+ul li:nth-of-type(1) {
+    position: relative;
+    font: 0/0 a;
+    background: url(../images/home.png);
+    background-repeat: no-repeat;
+    background-size: 3rem;
+    width: 4rem;
+    height: 4rem;
+    margin-right: 10rem;
+    flex-grow: 1;
+}
+
+ul li:nth-of-type(2) {
+    position: relative;
+    font: 0/0 a;
+    background: url(../images/favorieten.png);
+    background-repeat: no-repeat;
+    background-size: 4rem;
+    width: 4rem;
+    height: 4rem;
+}
+
+ul li:nth-of-type(3) {
+    position: relative;
+    font: 0/0 a;
+    background: url(../images/mijnaccount.png);
+    background-repeat: no-repeat;
+    background-size: 4rem;
+    width: 4rem;
+    height: 4rem;
+}
+
+li a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+
+header nav a:hover {
+    background-color: white;
+    opacity: 0.2;
+}
+
+
+/*MAIN*/
+
+main {
+    height: 134em;
+}
+
+
+/*BUTTONS*/
+
+fieldset {
+    margin-top: 1em;
+    margin-left: 3%;
+    border: none;
+}
+
+main button {
+    border-radius: 4em;
+}
+
+main fieldset button:nth-of-type(1) {
+    background-image: url(../images/heart.png);
+    background-position: center;
+    background-size: 2.5em;
+    background-repeat: no-repeat;
+    width: 4em;
+    height: 4em;
+    box-shadow: none;
+    background-color: white;
+    opacity: 0.8;
+    border: 0.2em solid white;
+}
+
+main fieldset button:nth-of-type(2) {
+    background-image: url(../images/download.png);
+    background-position: center;
+    background-size: 2em;
+    background-repeat: no-repeat;
+    width: 4em;
+    height: 4em;
+    box-shadow: none;
+    background-color: white;
+    opacity: 0.8;
+    border: 0.2em solid white;
+}
+
+main fieldset button:nth-of-type(1):hover {
+    background-image: url(../images/hoverheart.png);
+    background-color: pink;
+}
+
+main fieldset button:nth-of-type(2):hover {
+    background-image: url(../images/downloadhover.png);
+    background-color: pink;
+}
+
+main fieldset button:nth-of-type(1).favorietgezet {
+    background-image: url(../images/gefavorite.png);
+    background-color: lightgrey;
+    opacity: 0.8;
+    border: 0.2em solid white;
+}
+
+ul li:nth-of-type(2).favorieten {
+    background-image: url(../images/favorieten1.gif);
+    background-size: 3rem;
+    background-position: center;
+}
+
+ul li:nth-of-type(3).download {
+    background-image: url(../images/download1.gif);
+    background-size: 3.2rem;
+    margin-bottom: 1rem;
+    background-position: center;
+}
+
+main fieldset button:nth-of-type(2).gedownload {
+    background-image: url(../images/downloaden.gif);
+    background-size: 3.4rem;
+    background-color: lightgrey;
+    opacity: 0.8;
+    border: 0.2em solid white;
+}
+
+main fieldset button:active {
+    transform: scale(.9);
+}
+
+
+/*REACTIES*/
+
+aside {
+    visibility: hidden;
+    position: absolute;
+    background-color: #f7f7f7;
+    width: 11em;
+    border-radius: 1em;
+    margin-left: 76%;
+    margin-top: 9em;
+    height: 40em;
+}
+
+aside legend {
+    width: 6em;
+    margin-top: 0;
+    font-size: 1em;
+}
+
+textarea {
+    width: 10.5em;
+    margin-left: 0.2em;
+    height: 5em;
+    font-family: "lato", "open sans", "arial", "verdana", sans-serif;
+    font-size: 0.8em;
+    border: 0.1em solid gray;
+    resize:none;
+
+}
+
+form fieldset:nth-of-type(2) {
+    position:absolute;
+    margin-top: -2.1em;
+    display: flex;
+    flex-direction: row;
+    margin-left:1em;
+}
+
+form fieldset button {
+    padding-left:1.25em;
+    width: 4.5em;
+    border-radius: 0;
+    background-color: transparent;
+    box-shadow: none;
+    color: black;
+    border:none;
+/*    border: 0.1em solid black;*/
+}
+
+form fieldset button:nth-of-type(1) {
+    background-image: url(../images/like.png);
+    background-size: 1em;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-color: transparent;
+    margin-right:2.5em;
+}
+
+form fieldset button:nth-of-type(2) {
+    background-image: url(../images/plaats.png);
+    background-size: 1em;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-color: transparent;
+}
+
+aside form fieldset button:active {
+    transform: scale(.95);
+}
+
+form fieldset button:nth-of-type(1).reactielikegeven{
+    background-image: url(../images/geliked.png);
+    background-size: 1em;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-color: transparent;
+}
+
+@media (min-width: 30em) {
+    body {
+        background-image: url(../images/ipadrecept.gif);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        width: auto;
+    }
+    main {
+        height: 125em;
+        display: grid;
+        grid-template-columns: 1fr 1fr auto 1fr;
+        grid-template-rows: 1.2em auto 1fr;
+        grid-gap: 1em;
+    }
+    fieldset {
+        grid-column: 3;
+        grid-row: 2;
+    }
+}
+
+@media (min-width: 44em) {
+    body {
+        background-image: url(../images/desktoprecept.gif);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        width: auto;
+    }
+    main {
+        height: 132em;
+        display: grid;
+        grid-template-columns: 1fr 8em auto 1fr;
+        grid-template-rows: auto 1fr;
+        grid-gap: 1em;
+    }
+    fieldset {
+        grid-column: 3;
+        /*        grid-row: 2;*/
+    }
+}
+
+@media (min-width: 50em) {
+ aside {
+        visibility: visible;
+    }
+}

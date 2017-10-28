@@ -1,0 +1,307 @@
+html {
+    margin-right: -0.5em;
+    font-family: "lato", "open sans", "arial", "verdana", sans-serif;
+}
+
+
+/*HEADER*/
+
+header {
+    margin-top: -1.5em;
+    margin-left: -2em;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    box-shadow: 0 0.1em 1em 0;
+}
+
+header form input {
+    -webkit-appearance: none;
+    box-sizing: border-box;
+    background-image: url(../images/zoeken.png);
+    background-size: 3.5em;
+    background-repeat: no-repeat;
+    border: solid #00d867 0.2em;
+    padding: 1em 2em 1em;
+    border-radius: 3em;
+    transition: all .3s;
+    width: 1em;
+    position: absolute;
+    margin-left: 7em;
+    margin-top: 1em;
+    top: 0;
+    left: 0;
+}
+
+header form input:focus {
+    width: 11em;
+    padding: 1em 3em 1em;
+}
+
+header nav {
+    width: 100%;
+    height: 6em;
+    margin-bottom: -1em;
+}
+
+header ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+
+header ul li {
+    width: 100%;
+}
+
+ul li:nth-of-type(1) {
+    position: relative;
+    font: 0/0 a;
+    background: url(../images/home.png);
+    background-repeat: no-repeat;
+    background-size: 3rem;
+    width: 4rem;
+    height: 4rem;
+    margin-right: 10rem;
+    flex-grow: 1;
+}
+
+header ul li:nth-of-type(2) {
+    position: relative;
+    font: 0/0 a;
+    background: url(../images/favorieten.png);
+    background-repeat: no-repeat;
+    background-size: 4rem;
+    width: 4rem;
+    height: 4rem;
+}
+
+header ul li:nth-of-type(3) {
+    position: relative;
+    font: 0/0 a;
+    background: url(../images/mijnaccount.png);
+    background-repeat: no-repeat;
+    background-size: 4rem;
+    width: 4rem;
+    height: 4rem;
+}
+
+li a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+
+header nav a:hover {
+    background-color: white;
+    opacity: 0.2;
+}
+
+
+/*MAIN*/
+
+main {
+    height: 103em;
+    background-image: url(../images/mobilevrijdagde13e.gif);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: right 3em;
+    font-family: "lato", "open sans", "arial", "verdana", sans-serif;
+    background-attachment: scroll;
+    background-color: #000;
+    margin-left: -1em;
+}
+
+
+/*BUTTONS*/
+
+fieldset {
+    margin-left: 3%;
+    border: none;
+}
+
+button {
+    border-radius: 4em;
+}
+
+main fieldset button:nth-of-type(1) {
+    background-image: url(../images/heart.png);
+    background-position: center;
+    background-size: 2.5em;
+    background-repeat: no-repeat;
+    width: 4em;
+    height: 4em;
+    box-shadow: none;
+    background-color: transparent;
+    border: none;
+}
+
+main fieldset button:nth-of-type(2) {
+    background-image: url(../images/download.png);
+    background-position: center;
+    background-size: 2em;
+    background-repeat: no-repeat;
+    width: 4em;
+    height: 4em;
+    box-shadow: none;
+    background-color: transparent;
+    border: none;
+}
+
+main fieldset button:nth-of-type(1):hover {
+    background-image: url(../images/hoverheart.png);
+    background-color: pink;
+}
+
+main fieldset button:nth-of-type(2):hover {
+    background-image: url(../images/downloadhover.png);
+    background-color: pink;
+}
+
+main fieldset button:nth-of-type(1).favorietgezet {
+    background-image: url(../images/gefavorite.png);
+}
+
+ul li:nth-of-type(2).favorieten {
+    background-image: url(../images/favorieten1.gif);
+    background-size: 3rem;
+    background-position: center;
+}
+
+ul li:nth-of-type(3).download {
+    background-image: url(../images/download1.gif);
+    background-size: 3.2rem;
+    margin-bottom: 1rem;
+    background-position: center;
+}
+
+main fieldset button:nth-of-type(2).gedownload {
+    background-image: url(../images/downloaden.gif);
+    background-size: 3.4rem;
+}
+
+main fieldset button:active {
+    transform: scale(.9);
+}
+
+
+/*REACTIES*/
+
+aside {
+    visibility: hidden;
+    position: absolute;
+    background-color: #1f1f1f;
+    width: 11em;
+    border-radius: 1em;
+    margin-left: 76%;
+    margin-top: 8em;
+    height: 40em;
+}
+
+aside legend {
+    width: 6em;
+    margin-top: 1em;
+    font-size: 1em;
+    color: red;
+}
+
+form fieldset:nth-of-type(2) {
+    position:absolute;
+    margin-top: -2.2em;
+    display: flex;
+    flex-direction: row;
+    margin-left:1em;
+}
+
+form fieldset button {
+    padding-left:1.25em;
+    width: 4.5em;
+    border-radius: 0;
+    background-color: transparent;
+    box-shadow: none;
+    color: black;
+    border:none;
+/*    border: 0.1em solid black;*/
+}
+
+form fieldset button:nth-of-type(1) {
+    background-image: url(../images/like.png);
+    background-size: 1em;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-color: transparent;
+    margin-right:2.3em;
+}
+
+form fieldset button:nth-of-type(2) {
+    background-image: url(../images/plaats.png);
+    background-size: 1em;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-color: transparent;
+}
+
+fieldset textarea {
+    margin-left: 0.2em;
+    width: 10.5em;
+    height: 5em;
+    font-family: "lato", "open sans", "arial", "verdana", sans-serif;
+    font-size: 0.8em;
+    border: 0.1em solid gray;
+    resize:none;
+}
+
+form fieldset button:nth-of-type(1).reactielikegeven{
+    background-image: url(../images/geliked.png);
+    background-size: 1em;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-color: transparent;
+}
+
+aside form fieldset button:active {
+    transform: scale(.95);
+}
+
+@media (min-width: 30em) {
+    main {
+        background-image: url(../images/ipadvrijdagde13e.gif);
+        background-size: auto 100%;
+        background-position: center top;
+        background-repeat: no-repeat;
+        width: auto;
+        height: 65em;
+        display: grid;
+        grid-template-columns: 1fr 20% auto 1fr;
+        grid-template-rows: 0.2em 5% 1fr 1fr 1fr 1fr;
+        grid-gap: 1em;
+    }
+    fieldset {
+        grid-column: 3;
+        grid-row: 2;
+    }
+}
+
+@media (min-width: 44em) {
+    main {
+        background-image: url(../images/desktopvrijdagde13e.gif);
+        background-size: auto 100%;
+        background-repeat: no-repeat;
+        width: auto;
+        height: 96em;
+        display: grid;
+        grid-template-columns: 1fr 30% 1fr 1fr;
+        grid-template-rows: 1.5em 5% 1fr 1fr 1fr 1fr;
+        grid-gap: 1em;
+    }
+    fieldset {
+        grid-column: 3;
+        grid-row: 2;
+    }
+}
+
+@media (min-width: 62em){
+        aside {
+        visibility: visible;
+    }
+}

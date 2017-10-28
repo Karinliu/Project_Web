@@ -1,0 +1,376 @@
+    /*INDEX.HTML*/
+
+    html {
+        margin-left: -1em;
+    }
+
+    body {
+        background-image: url(../images/tropical1.jpg);
+        background-repeat: no-repeat;
+        background-color: #f3e5d8;
+        margin-top: 2em;
+        width: 100%;
+        font-family: "nexa", "arial", sans-serif;
+    }
+
+    header {
+        margin-top: -2.5em;
+        margin-left: -2em;
+        background-color: white;
+        background-size: 100% 100%;
+        display: flex;
+        flex-direction: row;
+    }
+
+    header form input {
+        -webkit-appearance: none;
+        box-sizing: border-box;
+        background-image: url(../images/zoeken.png);
+        background-size: 3.5em;
+        background-repeat: no-repeat;
+        border: solid #00d867 0.2em;
+        padding: 1.5em 2em 1em;
+        border-radius: 3em;
+        transition: all .3s;
+        width: 1em;
+        position: absolute;
+        margin-left: 7em;
+        margin-top: 1.5em;
+        top: 0;
+        left: 0;
+    }
+
+    header form input:focus {
+        width: 13em;
+        padding: 1.5em 4em 1em;
+    }
+
+    header nav {
+        width: 100%;
+        height: 6em;
+    }
+
+    header nav ul {
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+    }
+
+    header nav ul li {
+        width: 100%;
+    }
+
+    ul li:nth-of-type(1) {
+        position: relative;
+        font: 0/0 a;
+        background: url(../images/transavialogo.png);
+        background-repeat: no-repeat;
+        background-size: 4rem;
+        width: 4rem;
+        height: 4rem;
+        flex-grow: 1;
+    }
+
+    ul li:nth-of-type(2) {
+        position: relative;
+        font: 0/0 a;
+        background: url(../images/favorieten.png);
+        background-repeat: no-repeat;
+        background-size: 4rem;
+        width: 4rem;
+        height: 4rem;
+    }
+
+    ul li:nth-of-type(3) {
+        position: relative;
+        font: 0/0 a;
+        background: url(../images/mijnaccount.png);
+        background-repeat: no-repeat;
+        background-size: 4rem;
+        width: 4rem;
+        height: 4rem;
+    }
+
+    li a {
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+    }
+
+    h1 {
+        color: #36328f;
+        font-size: 2em;
+        margin-left: 0.5em;
+        padding: 0.5em;
+        margin-bottom: -0.2em;
+        margin-left: 35%;
+        margin-right: 5%;
+        padding-left: 1em;
+        padding-right: 1em;
+        color: #36328f;
+        margin-left: 0.5em;
+    }
+
+    h2 {
+        color: #36328f;
+        padding-top: 1em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+
+    aside {
+        background-image: url(../images/filter.png);
+        background-size: 2.5em;
+        background-repeat: no-repeat;
+        background-position: top right;
+        /*        margin-top: 6.5em;*/
+        width: 9em;
+        background-color: #f7f7f7;
+        border-radius: 1em;
+        float: left;
+        position: absolute;
+        transition: .25s;
+    }
+
+    aside.active {
+        transition: .25s;
+        transform: translate(-105%);
+    }
+
+    h3 {
+        color: #36328f;
+        font-size: 1em;
+        margin-left: 0.5em;
+    }
+
+    aside fieldset {
+        margin-top: 1em;
+        margin-left: -0.5em;
+        margin-right: 1em;
+        border: none;
+        color: #36328f;
+        display: flex;
+        flex-direction: column;
+        float: left;
+    }
+
+    aside fieldset input {
+        border: #36328f;
+    }
+
+    aside fieldset label {
+        /*        cursor: default;*/
+        color: #36328f;
+    }
+
+    aside button:nth-of-type(1) {
+        visibility: visible;
+        width: 5.5em;
+        height: 5em;
+        box-shadow: none;
+        background-image: url(../images/filter.png);
+        background-repeat: no-repeat;
+        background-size: 5em;
+        background-position: right top;
+        background-color: #f7f7f7;
+        margin-top: -0.01em;
+        margin-left: -2em;
+        border-radius: 1em;
+        transition: .25s;
+    }
+
+    button {
+        box-sizing: border-box;
+        box-shadow: 0 0.2em 0.2em #b20120;
+        margin: 1em;
+        background-color: #ee3669;
+        width: 8em;
+        height: 2.5em;
+        border: none;
+        border-radius: 2em;
+        color: white;
+    }
+
+    button:hover {
+        background-color: #ef4a78;
+    }
+
+    article {
+        padding-bottom: 1.5em;
+        margin-left: 5%;
+        margin-right: 5%;
+        padding-left: 1em;
+        padding-right: 1em;
+        border-radius: 1em;
+        background-color: #ee3669;
+        color: white;
+    }
+
+    article a {
+        padding-top: 1em;
+        width: 100%;
+        float: left;
+        color: #36328f;
+        text-decoration: none;
+    }
+
+    article#verhaal1:hover {
+        background: url(../images/droom.png);
+        background-size: 100%;
+        color: dimgray;
+    }
+
+    article#verhaal2:hover {
+        background: url(../images/vrijdagde13e.png);
+        background-size: 100%;
+    }
+
+    article#verhaal3:hover {
+        background: url(../images/recept.png);
+        background-size: 100%;
+        color: transparent;
+    }
+
+    section#reacties {
+        display: block;
+        visibility: hidden;
+        background-color: #f7f7f7;
+        /*        margin-left: -0.5em;*/
+        width: 7em;
+        border-radius: 1em;
+    }
+
+    textarea {
+        margin: 1em;
+        height: 4em;
+        width: 80%;
+    }
+    /*    FORMULIER INLOGGEN*/
+
+    form {
+        margin: 2em;
+        padding: 1em;
+        color: #36328f;
+        background-color: white;
+        opacity: 0.9;
+        border-radius: 1em;
+    }
+
+    form fieldset {
+        display: inline-block;
+        display: flex;
+        flex-direction: column;
+        border: none;
+        width: 93%;
+    }
+
+    form fieldset legend {
+        border: none;
+        font-size: 1.5em;
+        padding-bottom: 1em;
+    }
+
+    main form input {
+        border-radius: 1em;
+        border: .01em solid grey;
+        padding: 1em 1em;
+    }
+
+    main form type:visited {
+        border: .01em solid blue;
+    }
+    /*IPAD*/
+
+    @media (min-width: 30em) {
+        body {
+            max-width: 44em;
+            background-image: url(../images/tropical2.jpg);
+            background-repeat: no-repeat;
+        }
+        main {
+            display: grid;
+            grid-gap: 1em;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: auto 1fr 1fr 1fr 1fr;
+        }
+        h1 {
+            font-size: 2em;
+            grid-column: 1/5;
+        }
+        h2 {
+            margin-top: -0.1em;
+        }
+        aside {
+            width: 9em;
+            grid-column: 1;
+            grid-row: 2/5;
+        }
+        aside button:nth-of-type(1) {
+            visibility: hidden;
+        }
+        article#verhaal1 {
+            grid-column: 2/5;
+            grid-row: 2;
+        }
+        article#verhaal2 {
+            grid-column: 2/5;
+            grid-row: 3;
+        }
+        article#verhaal3 {
+            grid-column: 2/5;
+            grid-row: 4;
+        }
+        section#reacties {
+            width: 9em;
+        }
+        form {
+            grid-column: 2/4;
+            grid-row: 1/4;
+        }
+        form label {
+            display: inline-block;
+            margin-bottom: 1em;
+            margin-top: 1em;
+        }
+    }
+    /*LAPTOP FORMAAT*/
+
+    @media (min-width: 44em) {
+        aside {
+            width: 10em;
+        }
+        body {
+            max-width: 100%;
+            background-image: url(../images/tropical.jpg);
+            background-repeat: no-repeat;
+        }
+        h1 {
+            grid-column: 2/4;
+            grid-row: 1;
+        }
+        article#verhaal1 {
+            grid-column: 2/4;
+            grid-row: 2;
+        }
+        article#verhaal2 {
+            grid-column: 2/4;
+            grid-row: 3;
+        }
+        article#verhaal3 {
+            grid-column: 2/4;
+            grid-row: 4;
+        }
+        section#reacties {
+            visibility: visible;
+            grid-column: 4;
+            grid-row: 2/5;
+            width: 10em;
+        }
+    }
+    /*Bronnen*/
+    /*CSS CODE visibility: hidden en visibilty: visible https: //thenewcode.com/304/Four-Ways-to-Make-Elements-Disappear-And-Reappear-Using-CSS*/
+    /*Search:https://tympanus.net/codrops/2013/06/26/expanding-search-bar-deconstructed/*/
+    /*Webkit: https://css-tricks.com/almanac/properties/a/appearance/ (zodat de search input jouw stijl aanneemt en niet de standaard)*/
+    /*../images linkt naar je mapje en vervolgens naar je images. https://stackoverflow.com/questions/29823287/how-to-get-background-image-present-in-other-folder-using-css*/
