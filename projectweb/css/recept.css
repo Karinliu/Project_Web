@@ -205,7 +205,6 @@ aside {
     background-color: #f7f7f7;
     width: 11em;
     border-radius: 1em;
-    margin-left: 76%;
     margin-top: 9em;
     height: 40em;
 }
@@ -318,5 +317,6 @@ form fieldset button:nth-of-type(1).reactielikegeven{
 @media (min-width: 50em) {
  aside {
         visibility: visible;
+         margin-left: 76%;
     }
 }

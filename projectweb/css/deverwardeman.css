@@ -1,4 +1,4 @@
-    body {
+body {
     background-image: url(../images/mobiledeverwardeman.png);
     background-size: 100%;
     background-repeat: no-repeat;
@@ -7,6 +7,7 @@
     background-attachment: scroll;
     background-color: #ffff;
     height: 119em;
+    margin-right:-1em;
 }
 
 header {
@@ -190,7 +191,6 @@ aside {
     background-color: #f7f7f7;
     width: 11em;
     border-radius: 1em;
-    margin-left: 83%;
     margin-top: -2em;
     height: 35em;
 }
@@ -338,6 +338,7 @@ footer:hover {
     }
     aside {
         visibility: visible;
+        margin-left: 83%;
     }
 }
 

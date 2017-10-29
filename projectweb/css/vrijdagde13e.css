@@ -1,4 +1,4 @@
-html {
+body {
     margin-right: -0.5em;
     font-family: "lato", "open sans", "arial", "verdana", sans-serif;
 }
@@ -193,7 +193,6 @@ aside {
     background-color: #1f1f1f;
     width: 11em;
     border-radius: 1em;
-    margin-left: 76%;
     margin-top: 8em;
     height: 40em;
 }
@@ -300,8 +299,9 @@ aside form fieldset button:active {
     }
 }
 
-@media (min-width: 62em){
-        aside {
+@media (min-width: 62em) {
+    aside {
         visibility: visible;
+        margin-left: 76%;
     }
 }
