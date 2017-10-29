@@ -450,7 +450,7 @@ section {
     width: 8.5em;
     margin-left: 2em;
     margin-top: 9em;
-    color:#36328f;
+    color: #36328f;
     visibility: hidden;
 }
 
@@ -461,7 +461,7 @@ h3 {
 }
 
 section p {
-    margin-top:-0.5em;
+    margin-top: -0.5em;
     background-image: url(../images/profielfoto.png);
     background-size: 2em;
     background-repeat: no-repeat;
@@ -474,22 +474,22 @@ section fieldset {
     display: flex;
     flex-direction: row;
     border: none;
-    margin-left:2.6em;
-    margin-top:-3em;
+    margin-left: 2.6em;
+    margin-top: -3em;
 }
 
 section fieldset button {
     margin-left: -0.8em;
     border-radius: 0;
     box-shadow: none;
-    color:black;
+    color: black;
 }
 
 section fieldset button:nth-of-type(1) {
     background-color: transparent;
     width: 5em;
     margin-left: -1em;
-    color:#36328f;
+    color: #36328f;
 }
 
 section fieldset button:nth-of-type(2) {
@@ -511,7 +511,7 @@ section fieldset button:nth-of-type(3) {
 }
 
 section fieldset button:nth-of-type(1):hover {
-    color:#ef4a78;
+    color: #ef4a78;
 }
 
 section fieldset button:nth-of-type(2).berichtlikegeven {
@@ -528,9 +528,10 @@ section fieldset button:nth-of-type(3).berichtdislikegeven {
     background-position: center;
 }
 
-section.berichtplaatsen{
+section.berichtplaatsen {
     visibility: visible;
 }
+
 
 /*    FORMULIER INLOGGEN*/
 
@@ -550,7 +551,6 @@ main form fieldset {
     display: flex;
     flex-direction: column;
     border: none;
-    width: 94%;
 }
 
 main form fieldset legend {
