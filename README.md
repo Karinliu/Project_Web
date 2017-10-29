@@ -5,3 +5,5 @@ Klas:       205
 
 Vak:        Project Web
 Docenten:   Barbara Brink, Joost Faber & Koop Reynders
+
+Browser:    Firefox
