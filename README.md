@@ -1,2 +1,7 @@
 # Project_Web
-Karin Liu, 500752743, 205
+Naam:       Karin Liu
+Stud.nr.:   500752743
+Klas:       205
+
+Vak:        Project Web
+Docenten:   Barbara Brink, Joost Faber & Koop Reynders
