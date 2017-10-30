@@ -299,7 +299,7 @@ form fieldset button:nth-of-type(1).reactielikegeven{
     }
 }
 
-@media (min-width: 44em) {
+@media (min-width: 49em) {
     body {
         background-image: url(../images/desktoprecept.gif);
         background-size: 100%;
