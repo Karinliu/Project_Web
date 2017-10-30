@@ -245,6 +245,11 @@ form fieldset button {
 /*    border: 0.1em solid black;*/
 }
 
+form fieldset button:hover{
+    background-color:white;
+    opacity:0.6;
+}
+
 form fieldset button:nth-of-type(1) {
     background-image: url(../images/like.png);
     background-size: 1em;

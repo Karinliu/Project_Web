@@ -219,6 +219,11 @@ aside form fieldset button {
     border:none;
 }
 
+form fieldset button:hover{
+    background-color:white;
+    opacity:0.6;
+}
+
 aside form fieldset button:active {
     transform: scale(.95);
 }

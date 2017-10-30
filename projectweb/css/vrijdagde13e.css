@@ -1,6 +1,7 @@
 body {
     margin-right: -0.5em;
     font-family: "lato", "open sans", "arial", "verdana", sans-serif;
+    background-color:black;
 }
 
 
@@ -221,6 +222,11 @@ form fieldset button {
     color: black;
     border:none;
 /*    border: 0.1em solid black;*/
+}
+
+form fieldset button:hover{
+    background-color:white;
+    opacity:0.6;
 }
 
 form fieldset button:nth-of-type(1) {

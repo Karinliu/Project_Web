@@ -407,6 +407,11 @@ form fieldset button {
     /*    border: 0.1em solid black;*/
 }
 
+form fieldset button:hover {
+    background-color:white;
+    opacity:0.6;
+}
+
 form fieldset button:nth-of-type(1) {
     background-image: url(../images/like.png);
     background-size: 1em;
@@ -449,7 +454,7 @@ section {
     position: relative;
     width: 8.5em;
     margin-left: 2em;
-    margin-top: 9em;
+    margin-top: 8em;
     color: #36328f;
     visibility: hidden;
 }
@@ -514,6 +519,16 @@ section fieldset button:nth-of-type(1):hover {
     color: #ef4a78;
 }
 
+section fieldset button:nth-of-type(2):hover{
+    background-color: #f7f7f7;
+    opacity:0.5;
+}
+
+section fieldset button:nth-of-type(3):hover{
+    background-color: #f7f7f7;
+    opacity:0.5;
+}
+
 section fieldset button:nth-of-type(2).berichtlikegeven {
     background-image: url(../images/geliked.png);
     background-size: 1em;
@@ -529,6 +544,8 @@ section fieldset button:nth-of-type(3).berichtdislikegeven {
 }
 
 section.berichtplaatsen {
+    transition: .25s;
+    transform:translateY(5%);
     visibility: visible;
 }
 
