@@ -241,13 +241,15 @@ article:nth-of-type(3):hover {
 }
 
 article fieldset {
-    display: inline-block;
+    display:block;
     border: none;
     margin-left: -1.3em;
-    margin-top: -2em;
+/*    margin-top: -2em;*/
     background-color: transparent;
+/*
     display: flex;
     flex-direction: row;
+*/
     margin-bottom: -1.5em;
 }
 
@@ -591,6 +593,22 @@ main form input:valid {
     border: 0.2em solid #44fc44;
 }
 
+main form fieldset:valid #button{
+    transition: 0.2s;
+    box-sizing: border-box;
+    box-shadow: 0 0.2em 0.2em #b20120;
+    margin: 1em;
+    background-color: #ee3669;
+    width: 8em;
+    height: 2.5em;
+    border: none;
+    border-radius: 2em;
+    color: white;
+}
+
+main form fieldset:invalid #button{
+    display:none;
+}
 
 /*IPAD FORMAAT*/
 
