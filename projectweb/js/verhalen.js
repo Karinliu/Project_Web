@@ -9,6 +9,10 @@ var verhalenGedownload = document.querySelector('ul li:nth-of-type(3)');
 
 var reactieLiken = document.querySelector('form fieldset button:nth-of-type(1)');
 
+var zoeken = document.querySelector('header form:nth-of-type(1) button');
+var zoekbalk = document.querySelector('header form:nth-of-type(2) input');
+
+
 //Verhalen in favorieten zetten
 verhalenLikeButton.addEventListener('click', function () {
     verhalenSetFavorite.classList.toggle('favorieten');
@@ -34,4 +38,9 @@ verhalenDownloadButton.addEventListener('click', function () {
 reactieLiken.addEventListener('click', function (e) {
     e.preventDefault();
     reactieLiken.classList.toggle('reactielikegeven');
+});
+
+//Zoeken
+zoeken.addEventListener('click', function (e) {
+    e.preventDefault();    zoekbalk.classList.toggle('zoeken');
 });

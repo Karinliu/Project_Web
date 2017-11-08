@@ -10,40 +10,22 @@ body {
 /*HEADER/NAVIGATIE*/
 
 header {
-    margin-top: -1.5em;
+    margin-top: -1.2em;
     margin-left: -2em;
+    padding-right: 2em;
     background-color: white;
     display: flex;
     flex-direction: row;
-    box-shadow: 0 0.1em 1em 0;
-}
-
-header form input {
-    -webkit-appearance: none;
-    box-sizing: border-box;
-    background-image: url(../images/zoeken.png);
-    background-size: 3.5em;
-    background-repeat: no-repeat;
-    border: solid #00d867 0.2em;
-    padding: 1em 2em 1em;
-    border-radius: 3em;
-    transition: all .3s;
-    width: 1em;
-    position: absolute;
-    margin-left: 7em;
-    margin-top: 1em;
-    top: 0;
-    left: 0;
-}
-
-header form input:focus {
-    width: 11em;
-    padding: 1em 3em 1em;
+    box-shadow: 0 0.1em 0.4em 0 rgba(0, 0, 0, .3);
+    width: 100%;
+    height: 4em;
+    position: fixed;
+    z-index: 10;
+    display: inline-block;
 }
 
 header nav {
-    width: 100%;
-    height: 6em;
+    /*    height: 6em;*/
     margin-bottom: -1em;
 }
 
@@ -53,18 +35,15 @@ header nav ul {
     list-style: none;
 }
 
-header nav ul li {
-    width: 100%;
-}
-
 ul li:nth-of-type(1) {
     position: relative;
     font: 0/0 a;
     background: url(../images/home.png);
     background-repeat: no-repeat;
-    background-size: 3rem;
-    width: 4rem;
-    height: 4rem;
+    background-size: 2rem;
+    width: 2rem;
+    height: 2rem;
+    margin-top: 0.2rem;
     margin-right: 10rem;
     flex-grow: 1;
 }
@@ -74,9 +53,9 @@ ul li:nth-of-type(2) {
     font: 0/0 a;
     background: url(../images/favorieten.png);
     background-repeat: no-repeat;
-    background-size: 4rem;
-    width: 4rem;
-    height: 4rem;
+    background-size: 3rem;
+    width: 3rem;
+    height: 3rem;
 }
 
 ul li:nth-of-type(3) {
@@ -84,9 +63,9 @@ ul li:nth-of-type(3) {
     font: 0/0 a;
     background: url(../images/mijnaccount.png);
     background-repeat: no-repeat;
-    background-size: 4rem;
-    width: 4rem;
-    height: 4rem;
+    background-size: 3rem;
+    width: 3rem;
+    height: 3rem;
 }
 
 li a {
@@ -108,14 +87,14 @@ aside {
     background-size: 2.5em;
     background-repeat: no-repeat;
     background-position: top right;
-    margin-top: 1.5em;
     height: auto;
-    width: 9em;
-    background-color: #f7f7f7;
-    border-radius: 1em;
+    width: 11em;
+    background-color: rgb(247, 247, 247, 0.9);
+    border-radius: 1em 0 1em 1em;
     position: absolute;
     transition: .25s;
     transform: translate(-105%);
+    z-index: 1;
 }
 
 aside fieldset {
@@ -137,7 +116,7 @@ aside fieldset label {
 
 aside button:nth-of-type(1) {
     visibility: visible;
-    width: 5.5em;
+    width: 3.3em;
     height: 5em;
     box-shadow: none;
     position: absolute;
@@ -146,24 +125,19 @@ aside button:nth-of-type(1) {
     background-size: 5em;
     background-position: right top;
     background-color: #f7f7f7;
-    margin-left: -1em;
-    border-radius: 1em;
-    margin-top: -0.01em;
-}
-
-@media (max-width: 30em) {
-    aside.active {
-        transition: .25s;
-        transform: translate(0);
-    }
+    margin-left: 3.25em;
+    opacity: 0.9;
+    border-radius: 0 1em 1em 0;
+    margin-top: 0;
+    z-index: 5;
 }
 
 
 /*MAIN*/
-
 h1 {
     color: #36328f;
-    padding-left: 1em;
+    padding-left: 1.2em;
+    margin-top: 2em;
     /*    margin-left: 0.5em;*/
 }
 
@@ -174,7 +148,6 @@ h2 {
 
 article {
     padding-bottom: 1em;
-    /*        margin-left: 5%;*/
     margin-right: 1em;
     margin-left: 1em;
     padding-left: 1em;
@@ -184,102 +157,250 @@ article {
     color: white;
 }
 
+article p {
+    width: 100%;
+}
+
 article a {
-    padding-top: 0.2em;
+    padding-top: 0.5em;
     width: 100%;
     float: left;
     color: #36328f;
     text-decoration: none;
 }
 
+/*Zoekresultaat*/
+main > p {
+    font-size: 1.2em;
+    color: white;
+    margin-left: 2em;
+    transition: .5s;
+}
+
+
+/*NEP ARTIEKELEN HOVER*/
+
+article:nth-of-type(1n) {
+    background: url(../images/blue_hoek.png);
+    background-size: 14em;
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    background-color: #ee3669;
+}
+
+article:nth-of-type(2n) {
+    background: url(../images/ruit_hoek.png);
+    background-size: 14em;
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    background-color: #ee3669;
+}
+
+article:nth-of-type(3n) {
+    background: url(../images/redlines_hoek.png);
+    background-size: 14em;
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    background-color: #ee3669;
+}
+
+article:nth-of-type(4n) {
+    background: url(../images/greenlines_hoek.png);
+    background-size: 14em;
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    background-color: #ee3669;
+}
+
+/*HOVER*/
+
 article:nth-of-type(1n):hover {
     background: url(../images/blue.png);
     background-size: cover;
     color: white;
+    background-size: 100%;
+    background-position: top right;
+    background-repeat: no-repeat;
+    transition: 0.9s;
+    transform: translate(0);
 }
 
 article:nth-of-type(2n):hover {
     background: url(../images/ruit.png);
     background-size: cover;
-    color: #f096af;
+    color: purple;
+    background-size: 100%;
+    background-position: top right;
+    background-repeat: no-repeat;
+    transition: 0.9s;
+    transform: translate(0);
 }
 
 article:nth-of-type(3n):hover {
     background: url(../images/redlines.png);
     background-size: cover;
-    color: darkblue;
+    color: white;
+    background-size: 100%;
+    background-position: top right;
+    background-repeat: no-repeat;
+    transition: 0.9s;
+    transform: translatey(10);
+}
+
+article:nth-of-type(3n):hover h2 {
+    color: red;
+}
+
+article:nth-of-type(3n):hover a {
+    color: red;
 }
 
 article:nth-of-type(4n):hover {
-    background: url(../images/leaf.png);
-    background-size: cover;
-    color: gray;
-}
-
-article:nth-of-type(5n):hover {
     background: url(../images/greenlines.png);
     background-size: cover;
     color: white;
+    background-size: 100%;
+    background-position: top right;
+    background-repeat: no-repeat;
+    transition: 0.9s;
+    transform: translate(0);
+}
+
+article:nth-of-type(4n):hover h2 {
+    color: #ebff00;
+}
+
+article:nth-of-type(4n):hover a {
+    color: #ebff00;
+}
+
+
+/*ARTIEKEL 1 VRIJDAG DE 13E*/
+
+article:nth-of-type(1) {
+    background: url(../images/vrijdagde13e_hoek.png);
+    background-size: 14em;
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    background-color: #ee3669;
 }
 
 article:nth-of-type(1):hover {
     background: url(../images/vrijdagde13e.png);
-    background-size: cover;
+    background-size: 100%;
+    background-position: top right;
     color: white;
+    position: right;
+    background-repeat: no-repeat;
+    transition: 0.9s;
+    transform: translate(0);
+}
+
+article:nth-of-type(1):hover h2 {
+    color: #f48181;
+    transition: 0.9s;
+}
+
+article:nth-of-type(1):hover p {
+    width: 77%;
+}
+
+article:nth-of-type(1):hover a {
+    color: #f48181;
+    transition: 0.9s;
+}
+
+
+/*ARTIEKEL 2 DE VERWARDE MAN*/
+
+article:nth-of-type(2) {
+    background: url(../images/droom_hoek.png);
+    background-size: 14em;
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    background-color: #ee3669;
 }
 
 article:nth-of-type(2):hover {
     background: url(../images/droom.png);
-    background-size: cover;
-    color: dimgray;
+    color: #221c9b;
+    background-size: 100%;
+    background-position: top right;
+    background-repeat: no-repeat;
+    transition: 0.9s;
+    transform: translate(1);
+}
+
+article:nth-of-type(2):hover h2 {
+    color: #3c3b3b;
+    transition: 0.9s;
+}
+
+article:nth-of-type(2):hover a {
+    color: #3c3b3b;
+    transition: 0.9s;
+}
+
+
+/*ARTIEKEL 3 RECEPT*/
+
+article:nth-of-type(3) {
+    background: url(../images/recept_hoek.png);
+    background-size: 14em;
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    background-color: #ee3669;
 }
 
 article:nth-of-type(3):hover {
     background: url(../images/recept.png);
-    background-size: cover;
+    background-size: 100%;
     color: transparent;
+    background-position: top right;
+    background-repeat: no-repeat;
+    transition: 0.9s;
+    transform: translate(1);
 }
 
 article fieldset {
-    display:block;
+    display: inline-block;
     border: none;
     margin-left: -1.3em;
-/*    margin-top: -2em;*/
     background-color: transparent;
-/*
     display: flex;
     flex-direction: row;
-*/
+    position: relative;
     margin-bottom: -1.5em;
 }
 
 
 /*BUTTONS*/
 
-
 /*SIDEBAR*/
 
 aside a {
-    font-size: 0.75em;
-    padding-left: 2.3em;
-    padding-top: 0.5em;
+    font-size: 0.8em;
+    text-align: center;
+    letter-spacing: 0.05em;
+    padding-top: 0.7em;
     box-sizing: border-box;
     display: inline-block;
-    box-shadow: 0 0.2em 0.2em #b20120;
+    box-shadow: 0 0.2em 0.2em #0c022a;
     margin-top: 0.2em;
     margin-bottom: 1.7em;
     margin-left: 1em;
-    background-color: #ee3669;
-    width: 7.2em;
-    height: 2.2em;
+    background-color: #36328f;
+    width: 8em;
+    height: 2.6em;
     border: none;
-    border-radius: 2em;
+    border-radius: 4em;
     color: white;
     text-decoration: none;
+    font-weight: bold;
 }
 
 aside a:hover {
-    background-color: #ef4a78;
+    opacity:0.8;
 }
 
 aside a:active {
@@ -299,6 +420,7 @@ button {
     border: none;
     border-radius: 2em;
     color: white;
+    font-size: 0.8em;
 }
 
 button:hover {
@@ -315,34 +437,38 @@ button:active {
 article button:nth-of-type(1) {
     background-image: url(../images/heart.png);
     background-position: center;
-    background-size: 2em;
+    background-size: 1.8em;
     background-repeat: no-repeat;
     width: 3em;
     height: 3em;
     box-shadow: none;
-    background-color: transparent;
+    background-color: rgb(54, 50, 143, 0.8);
 }
 
 article button:nth-of-type(2) {
     background-image: url(../images/download.png);
     background-position: center;
-    background-size: 1.6em;
+    background-size: 1.4em;
     background-repeat: no-repeat;
     width: 3em;
     height: 3em;
     box-shadow: none;
-    background-color: transparent;
+    background-color: rgb(54, 50, 143, 0.8);
     /*        border:0.1em solid gray;*/
 }
 
 article button:nth-of-type(1):hover {
     background-image: url(../images/hoverheart.png);
     background-color: pink;
+    transform: scale(.85);
+    transition: 0.1s;
 }
 
 article button:nth-of-type(2):hover {
     background-image: url(../images/downloadhover.png);
     background-color: pink;
+    transform: scale(.85);
+    transition: 0.1s;
 }
 
 article button:nth-of-type(1).favorietgezet {
@@ -351,13 +477,13 @@ article button:nth-of-type(1).favorietgezet {
 
 ul li:nth-of-type(2).favorieten {
     background-image: url(../images/favorieten1.gif);
-    background-size: 3rem;
+    background-size: 2.25rem;
     background-position: center;
 }
 
 ul li:nth-of-type(3).download {
     background-image: url(../images/download1.gif);
-    background-size: 3.2rem;
+    background-size: 2.4rem;
     margin-bottom: 1rem;
     background-position: center;
 }
@@ -377,75 +503,98 @@ article button:active {
 #reacties {
     visibility: hidden;
     background-color: #f7f7f7;
-    width: 8em;
+    width: 10.5em;
     margin-top: 0;
     border-radius: 1em;
+    height: 26em;
 }
 
 #reacties legend {
+    font-weight: 100;
     margin-top: 0;
+    margin-bottom: 0.5em;
     font-size: 1em;
 }
 
 form fieldset {
-    margin-left: -0.8em;
+    padding: 0;
+    margin-left: -0.4em;
 }
 
 form fieldset:nth-of-type(2) {
-    position: absolute;
-    margin-top: -3.3em;
+    /*    margin-top: -2.5em;*/
     display: flex;
     flex-direction: row;
-    margin-left: -1em;
+    margin-left: -0.2em;
 }
 
+
+/*
 form fieldset button {
-    padding-left: 1.25em;
-    width: 4.5em;
+    width: 6em;
     border-radius: 0;
-    background-color: transparent;
     box-shadow: none;
     color: black;
-    /*    border: 0.1em solid black;*/
-}
-
-form fieldset button:hover {
-    background-color:white;
-    opacity:0.6;
-}
+*/
 
 form fieldset button:nth-of-type(1) {
+    margin-left: 0;
+    width: 6em;
+    background-color: #36328f;
+    box-shadow: 0 0.2em 0.2em #0c022a;
     background-image: url(../images/like.png);
     background-size: 1em;
     background-repeat: no-repeat;
-    background-position: left;
+    background-position: 1.1em;
+    padding-left: 1.7em;
+    /*    background-position: left;*/
+    /*
     background-color: transparent;
+*/
 }
 
 form fieldset button:nth-of-type(2) {
+    width: 6em;
+    margin-left: 0.6em;
+    background-color: #36328f;
+    box-shadow: 0 0.2em 0.2em #0c022a;
+    /*
     background-image: url(../images/plaats.png);
     background-size: 1em;
     background-repeat: no-repeat;
     background-position: left;
+
     background-color: transparent;
+*/
+}
+
+form fieldset button:hover {
+    opacity: 0.9;
 }
 
 fieldset textarea {
     margin-left: 0.2em;
-    width: 9.7em;
-    height: 5em;
+    padding: 0.5em;
+    width: 12.5em;
+    height: 6em;
     font-family: "lato", "open sans", "arial", "verdana", sans-serif;
     font-size: 0.8em;
     border: 0.1em solid gray;
     resize: none;
+    border-radius: 0.5em;
 }
 
 form fieldset button:nth-of-type(1).reactielikegeven {
     background-image: url(../images/geliked.png);
     background-size: 1em;
     background-repeat: no-repeat;
-    background-position: left;
+    background-position: 1em;
+    padding-left: 1.5em;
+    background-color: #5e40b8;
+    /*    background-position: left;*/
+    /*
     background-color: transparent;
+*/
 }
 
 
@@ -456,7 +605,7 @@ section {
     position: relative;
     width: 8.5em;
     margin-left: 2em;
-    margin-top: 8em;
+    margin-top: 11em;
     color: #36328f;
     visibility: hidden;
 }
@@ -502,7 +651,7 @@ section fieldset button:nth-of-type(1) {
 section fieldset button:nth-of-type(2) {
     background-color: transparent;
     width: 1.5em;
-    background-image: url(../images/like.png);
+    background-image: url(../images/like1.png);
     background-size: 1em;
     background-repeat: no-repeat;
     background-position: center;
@@ -521,18 +670,18 @@ section fieldset button:nth-of-type(1):hover {
     color: #ef4a78;
 }
 
-section fieldset button:nth-of-type(2):hover{
+section fieldset button:nth-of-type(2):hover {
     background-color: #f7f7f7;
-    opacity:0.5;
+    opacity: 0.5;
 }
 
-section fieldset button:nth-of-type(3):hover{
+section fieldset button:nth-of-type(3):hover {
     background-color: #f7f7f7;
-    opacity:0.5;
+    opacity: 0.5;
 }
 
 section fieldset button:nth-of-type(2).berichtlikegeven {
-    background-image: url(../images/geliked.png);
+    background-image: url(../images/geliked1.png);
     background-size: 1em;
     background-repeat: no-repeat;
     background-position: center;
@@ -547,7 +696,7 @@ section fieldset button:nth-of-type(3).berichtdislikegeven {
 
 section.berichtplaatsen {
     transition: .25s;
-    transform:translateY(5%);
+    transform: translateY(5%);
     visibility: visible;
 }
 
@@ -555,7 +704,7 @@ section.berichtplaatsen {
 /*    FORMULIER INLOGGEN*/
 
 main form {
-    margin-top: 1.5em;
+    margin-top: 8.5em;
     margin-right: 2em;
     margin-left: 1em;
     padding: 1em;
@@ -573,42 +722,117 @@ main form fieldset {
 }
 
 main form fieldset legend {
+    font-weight: bolder;
     margin-top: 0.5em;
     border: none;
     font-size: 1.5em;
 }
 
 main form fieldset label {
-    padding-top: 1em;
+    color: black;
+}
+
+hr {
+    width: 100%;
+    margin-top: 2em;
+    border: 0.01em solid #e6e6e6;
+}
+
+main form fieldset label:nth-of-type(3) {
+    font-weight: 100;
 }
 
 main form input {
-    margin-top: 0.5em;
+    margin-top: 0.1em;
     border-radius: 1em;
     border: 0.05em solid grey;
     padding: 1em 1em;
+    font-size: 0.8em;
+    color: gray;
+}
+
+main form input:hover {
+    color: lightgray;
+}
+
+main form input:focus {
+    border: 0.15em solid #36328f;
+    color: dimgray;
 }
 
 main form input:valid {
-    border: 0.2em solid #44fc44;
+    border: 0.15em solid #44fc44;
+    color: black;
 }
 
-main form fieldset:valid #button{
-    transition: 0.2s;
+main form fieldset:valid #button {
     box-sizing: border-box;
     box-shadow: 0 0.2em 0.2em #b20120;
     margin: 1em;
     background-color: #ee3669;
-    width: 8em;
-    height: 2.5em;
+    width: 10em;
+    height: 2.8em;
     border: none;
     border-radius: 2em;
     color: white;
+    font-size: 0.8em;
+    font-weight: bold;
+    transition: .5s;
+    transform: rotate(360deg);
+    padding:0;
+    /*    transform: rotateY(10%);*/
+    background-image: none;
 }
 
-main form fieldset:invalid #button{
-    display:none;
+main form fieldset:invalid #button {
+    display: hidden;
+    background-image: none;
+    color: transparent;
+    margin-top: -2em;
+    background-color: transparent;
+    box-shadow: none;
 }
+
+/*MOBIEL MAX GROOTTE*/
+
+@media (max-width: 30em) {
+    aside.active {
+        transition: .25s;
+        transform: translate(0);
+    }
+    aside {
+        background-image: none;
+    }
+    header {
+        margin-top: -5em;
+    }
+    /*    ZOEKBALK*/
+    header form:nth-of-type(1) {
+        visibility: hidden;
+    }
+    header form:nth-of-type(2) input {
+        -webkit-appearance: none;
+        box-sizing: border-box;
+        background-image: url(../images/zoeken.png);
+        background-size: 2.5em;
+        background-repeat: no-repeat;
+        border: solid #00d867 0.2em;
+        padding: 0.5em 1.3em 0.5em;
+        border-radius: 3em;
+        transition: all .3s;
+        width: 1em;
+        position: absolute;
+        margin-left: 7em;
+        margin-top: 2.3em;
+        top: 0;
+        left: 0;
+    }
+    header form:nth-of-type(2) input:focus {
+        width: 14.2em;
+        padding: 0.5em 2.3em 0.5em;
+    }
+}
+
 
 /*IPAD FORMAAT*/
 
@@ -618,26 +842,95 @@ main form fieldset:invalid #button{
         background-image: url(../images/tropical3.jpg);
         background-repeat: no-repeat;
     }
+    header form:nth-of-type(1) button {
+        background-image: url(../images/arrowdown.png);
+        background-size: 0.5em;
+        background-repeat: no-repeat;
+        padding-left: 1em;
+        width: 4em;
+        background-position: left;
+        position: absolute;
+        margin-left: 5em;
+        margin-top: 0.6em;
+        top: 0;
+        left: 0;
+        font-size: 1.3em;
+        font-weight: bold;
+        background-color: transparent;
+        color: #01D867;
+        box-shadow: none;
+    }
+    header form:nth-of-type(1) button:hover {
+        opacity: 0.8;
+    }
+    header form:nth-of-type(2) input {
+        width: 15em;
+        margin-left: 2.3em;
+        visibility: hidden;
+        -webkit-appearance: none;
+        box-sizing: border-box;
+        background-image: url(../images/zoeken.png);
+        background-size: 3.5em;
+        background-repeat: no-repeat;
+        border: solid #00d867 0.2em;
+        padding: 1em 1em 1em 3.4em;
+        border-radius: 1em;
+        position: absolute;
+        margin-top: 2.4em;
+        top: 0;
+        left: 0;
+        z-index: 0;
+        font-size: 0.8em;
+        color: black;
+    }
+    header form:nth-of-type(2) input:hover {
+        color: gray;
+    }
+    header form:nth-of-type(2) input:focus {
+        color: dimgray;
+    }
+    header form input:valid {
+        color: black;
+    }
+    header form:nth-of-type(2) input.zoeken {
+        visibility: visible;
+        transition: all .3s;
+        transform: translatey(115%);
+    }
     main {
         display: grid;
         grid-gap: 1em;
         grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-rows: auto 1fr 1fr 1fr 1fr;
+        grid-template-rows: 8em 1fr 1fr 1fr 1fr;
     }
     h1 {
-        font-size: 2em;
+        font-size: 2.3em;
         grid-column: 2/5;
         grid-row: 1;
+        margin-bottom: 0;
+        margin-top: 1.7em;
+        padding-left: 0.5em;
+    }
+    main > p {
+        font-size: 1.2em;
+        grid-column: 2/5;
+        font-size: 1em;
+        grid-row: 1;
+        margin-left: 1.2em;
+        margin-top: 6.9em;
+        margin-bottom: -3em;
+        transition: 0.9s;
     }
     h2 {
         margin-top: -0.1em;
     }
     aside {
-        margin-top: 6em;
-        margin-left: 9.5em;
-        width: 9em;
+        margin-top: 8.8em;
+        margin-left: 11.5em;
+        width: 11em;
         grid-column: 1;
         grid-row: 2/5;
+        border-radius: 1em;
     }
     aside button:nth-of-type(1) {
         visibility: hidden;
@@ -742,6 +1035,10 @@ main form fieldset:invalid #button{
         background-image: url(../images/tropical.jpg);
         background-repeat: no-repeat;
     }
+    header form:nth-of-type(2) input {
+        width: 15.5em;
+        margin-left: 9.5%;
+    }
     h1 {
         grid-column: 2/4;
         grid-row: 1;
@@ -841,9 +1138,31 @@ main form fieldset:invalid #button{
     }
 }
 
-@media (min-width: 50em) {
+@media (min-width: 55em) {
     aside {
-        width: 10em;
+        width: 12em;
+        transition: 0.9s;
         margin-left: 23.5%;
     }
 }
+
+
+/*Bronnen:*/
+
+
+/*hr: https://www.transavia.com/nl-NL/mijn-transavia/account/logon/*/
+
+
+/*CSS CODE visibility: hidden en visibilty: visible https: //thenewcode.com/304/Four-Ways-to-Make-Elements-Disappear-And-Reappear-Using-CSS*/
+
+
+/*Search:https://tympanus.net/codrops/2013/06/26/expanding-search-bar-deconstructed/*/
+
+
+/*Webkit: https://css-tricks.com/almanac/properties/a/appearance/ (zodat de search input jouw stijl aanneemt en niet de standaard)*/
+
+
+/*../images linkt naar je mapje en vervolgens naar je images. https://stackoverflow.com/questions/29823287/how-to-get-background-image-present-in-other-folder-using-css*/
+
+/*Pagina kan krullen*/
+/*http://www.picturetopeople.org/image_effects/photo-page-curl/page-curl-effect-photo-editor.html*/

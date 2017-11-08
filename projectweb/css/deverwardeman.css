@@ -2,44 +2,53 @@ body {
     background-image: url(../images/mobiledeverwardeman.png);
     background-size: 100%;
     background-repeat: no-repeat;
-    background-position: right 4em;
+    background-position: right 3em;
     font-family: "lato", "open sans", "arial", "verdana", sans-serif;
     background-attachment: scroll;
     background-color: #ffff;
     height: 119em;
-    margin-right:-1em;
+    margin-right: -1em;
 }
 
 header {
-    margin-top: -1.5em;
+    margin-top: -1.2em;
     margin-left: -2em;
+    padding-right: 2em;
     background-color: white;
     display: flex;
     flex-direction: row;
-    box-shadow: 0 0.1em 1em 0;
+    box-shadow: 0 0.1em 0.4em 0 rgba(0, 0, 0, .3);
+    width: 100%;
+    height: 4em;
+    position: fixed;
+    z-index: 10;
+}
+
+header form:nth-of-type(1) {
+    visibility: hidden;
 }
 
 header form input {
     -webkit-appearance: none;
     box-sizing: border-box;
     background-image: url(../images/zoeken.png);
-    background-size: 3.5em;
+    background-size: 2.5em;
     background-repeat: no-repeat;
     border: solid #00d867 0.2em;
-    padding: 1em 2em 1em;
+    padding: 0.5em 1.5em 0.5em;
     border-radius: 3em;
     transition: all .3s;
     width: 1em;
     position: absolute;
-    margin-left: 7em;
-    margin-top: 1em;
+    margin-left: 9em;
+    margin-top: 2.4em;
     top: 0;
     left: 0;
 }
 
 header form input:focus {
     width: 11em;
-    padding: 1em 3em 1em;
+    padding: 0.5em 3em 0.5em;
 }
 
 header nav {
@@ -63,9 +72,10 @@ ul li:nth-of-type(1) {
     font: 0/0 a;
     background: url(../images/home.png);
     background-repeat: no-repeat;
-    background-size: 3rem;
-    width: 4rem;
-    height: 4rem;
+    background-size: 2rem;
+    width: 2rem;
+    height: 2rem;
+    margin-top: 0.2rem;
     margin-right: 10rem;
     flex-grow: 1;
 }
@@ -75,9 +85,9 @@ ul li:nth-of-type(2) {
     font: 0/0 a;
     background: url(../images/favorieten.png);
     background-repeat: no-repeat;
-    background-size: 4rem;
-    width: 4rem;
-    height: 4rem;
+    background-size: 3rem;
+    width: 3rem;
+    height: 3rem;
 }
 
 ul li:nth-of-type(3) {
@@ -85,9 +95,9 @@ ul li:nth-of-type(3) {
     font: 0/0 a;
     background: url(../images/mijnaccount.png);
     background-repeat: no-repeat;
-    background-size: 4rem;
-    width: 4rem;
-    height: 4rem;
+    background-size: 3rem;
+    width: 3rem;
+    height: 3rem;
 }
 
 li a {
@@ -104,10 +114,12 @@ header nav a:hover {
 
 /*BUTTONS*/
 
-fieldset {
-    margin-top: 1em;
+main fieldset {
+    position: absolute;
+    margin-top: 3em;
     margin-left: 3%;
     border: none;
+    z-index: 4;
 }
 
 button {
@@ -122,7 +134,7 @@ main fieldset button:nth-of-type(1) {
     width: 4em;
     height: 4em;
     box-shadow: none;
-    background-color: white;
+    background-color: black;
     opacity: 0.8;
     border: 0.2em solid white;
 }
@@ -134,7 +146,7 @@ main fieldset button:nth-of-type(2) {
     background-repeat: no-repeat;
     width: 4em;
     height: 4em;
-    background-color: white;
+    background-color: black;
     opacity: 0.8;
     border: 0.2em solid white;
 }
@@ -142,29 +154,33 @@ main fieldset button:nth-of-type(2) {
 main fieldset button:nth-of-type(1):hover {
     background-image: url(../images/hoverheart.png);
     background-color: pink;
+    transform: scale(.9);
+    transition: 0.1s;
 }
 
 main fieldset button:nth-of-type(2):hover {
     background-image: url(../images/downloadhover.png);
     background-color: pink;
+    transform: scale(.9);
+    transition: 0.1s;
 }
 
 main fieldset button:nth-of-type(1).favorietgezet {
     background-image: url(../images/gefavorite.png);
-    background-color: lightgrey;
+    background-color: black;
     opacity: 0.8;
     border: 0.2em solid white;
 }
 
 ul li:nth-of-type(2).favorieten {
     background-image: url(../images/favorieten1.gif);
-    background-size: 3rem;
+    background-size: 2.25rem;
     background-position: center;
 }
 
 ul li:nth-of-type(3).download {
     background-image: url(../images/download1.gif);
-    background-size: 3.2rem;
+    background-size: 2.4rem;
     margin-bottom: 1rem;
     background-position: center;
 }
@@ -172,7 +188,7 @@ ul li:nth-of-type(3).download {
 main fieldset button:nth-of-type(2).gedownload {
     background-image: url(../images/downloaden.gif);
     background-size: 3.4rem;
-    background-color: lightgrey;
+    background-color: black;
     opacity: 0.8;
     border: 0.2em solid white;
 }
@@ -189,7 +205,7 @@ aside {
     visibility: hidden;
     position: absolute;
     background-color: #f7f7f7;
-    width: 11em;
+    width: 11.5em;
     border-radius: 1em;
     margin-top: -2em;
     height: 35em;
@@ -197,73 +213,85 @@ aside {
 
 aside legend {
     width: 6em;
-    margin-top: 0;
+    margin-top: 1em;
     font-size: 1em;
 }
 
+aside fieldset {
+    border: none;
+}
+
 form fieldset:nth-of-type(2) {
-    position:absolute;
-    margin-top: -2.2em;
+    position: absolute;
+    margin-top: -2.4em;
     display: flex;
     flex-direction: row;
-    margin-left:1em;
+    margin-left: 1em;
+    border: none;
 }
 
 aside form fieldset button {
-    padding-left:1.25em;
-    width: 4.5em;
+
+    width: 5.7em;
     border-radius: 0;
     background-color: transparent;
     box-shadow: none;
     color: black;
-    border:none;
+    border: none;
+    height: 2em;
+    font-size: 0.8em;
+    margin-top:2.5em;
+    border-radius: 4em;
+    height:2.5em;
+    color:white;
 }
 
-form fieldset button:hover{
-    background-color:white;
-    opacity:0.6;
+form fieldset button:hover {
+    background-color: white;
+    opacity: 0.6;
 }
 
 aside form fieldset button:active {
     transform: scale(.95);
 }
 
-
 form fieldset button:nth-of-type(1) {
+    margin-left: -0.8em;
+    background-color: #36328f;
+    box-shadow: 0 0.2em 0.2em #0c022a;
     background-image: url(../images/like.png);
     background-size: 1em;
     background-repeat: no-repeat;
-    background-position: left;
-    background-color: transparent;
-    margin-right:2em;
+    background-position: 1.1em;
+    padding-left: 1.7em;
 }
 
 form fieldset button:nth-of-type(2) {
-    background-image: url(../images/plaats.png);
-    background-size: 1em;
-    background-repeat: no-repeat;
-    background-position: left;
-    background-color: transparent;
+    margin-left: 0.6em;
+    background-color: #36328f;
+    box-shadow: 0 0.2em 0.2em #0c022a;
+    margin-left:0.8em;
 }
 
 fieldset textarea {
     margin-left: 0.2em;
-    width: 10.5em;
-    height: 5em;
+    padding: 0.5em;
+    width: 11em;
+    height: 6em;
     font-family: "lato", "open sans", "arial", "verdana", sans-serif;
     font-size: 0.8em;
     border: 0.1em solid gray;
-    resize:none;
+    resize: none;
+    border-radius: 0.5em;
 }
 
-form fieldset button:nth-of-type(1).reactielikegeven{
+form fieldset button:nth-of-type(1).reactielikegeven {
     background-image: url(../images/geliked.png);
     background-size: 1em;
     background-repeat: no-repeat;
     background-position: left;
     background-color: transparent;
 }
-
 
 
 /*FOOTER*/
@@ -290,15 +318,65 @@ footer:hover {
         width: auto;
         height: 131em;
     }
+    header form:nth-of-type(1) button {
+        background-image: url(../images/arrowdown.png);
+        background-size: 0.5em;
+        background-repeat: no-repeat;
+        padding-left: 1em;
+        width: 4em;
+        background-position: left;
+        position: absolute;
+        margin-left: 5em;
+        margin-top: 1.2em;
+        border: none;
+        top: 0;
+        left: 0;
+        font-size: 1.3em;
+        font-weight: bold;
+        background-color: transparent;
+        color: #01D867;
+        box-shadow: none;
+        visibility: visible;
+    }
+    header form:nth-of-type(1) button:hover {
+        opacity: 0.8;
+    }
+    header form:nth-of-type(2) input {
+        display: none;
+        -webkit-appearance: none;
+        box-sizing: border-box;
+        background-image: url(../images/zoeken.png);
+        background-size: 3.5em;
+        background-repeat: no-repeat;
+        border: solid #00d867 0.2em;
+        padding: 1em 3.4em 1em;
+        border-radius: 1em;
+        width: 16.5em;
+        position: absolute;
+        margin-top: 2.4em;
+        margin-left: 8.5em;
+        top: 0;
+        left: 0;
+        z-index: 0;
+        font-size: 0.8em;
+    }
+    header form:nth-of-type(2) input:focus {
+        color: gray;
+    }
+    header form:nth-of-type(2) input.zoeken {
+        visibility: visible;
+        transition: all .3s;
+        transform: translatey(150%);
+    }
     main {
         display: grid;
         grid-template-columns: 40% 1fr auto 1fr;
         grid-template-rows: 0.2em 5% 1fr;
         grid-gap: 1em;
     }
-    fieldset {
-        grid-column: 4;
-        grid-row: 2;
+    main fieldset {
+        margin-top: 5em;
+        margin-left: 70%;
     }
     footer {
         position: fixed;
@@ -322,13 +400,13 @@ footer:hover {
     }
     main {
         display: grid;
-        grid-template-columns: 1fr 1em auto  1fr;
+        grid-template-columns: 1fr 1em auto 1fr;
         grid-template-rows: auto 1fr;
         grid-gap: 1em;
     }
-    fieldset {
-        grid-column: 3;
-        grid-row: 1;
+    main fieldset {
+        margin-top: 3em;
+        margin-left: 45%;
     }
     footer {
         position: fixed;
@@ -343,8 +421,10 @@ footer:hover {
     }
     aside {
         visibility: visible;
-        margin-left: 83%;
+        margin-top: 5em;
+        margin-left: 82%;
     }
 }
 
-    /*Gif smoke http://www.laughinggif.com/gifs/ew022pstpq*/
+
+/*Gif smoke http://www.laughinggif.com/gifs/ew022pstpq*/

@@ -19,6 +19,9 @@ var berichtDisliken = document.querySelector('section fieldset button:nth-of-typ
 var reageren = document.querySelector('form fieldset button:nth-of-type(2)');
 var berichtplaatsen = document.querySelector('section');
 
+var zoeken = document.querySelector('header form:nth-of-type(1) button');
+var zoekbalk = document.querySelector('header form:nth-of-type(2) input');
+
 
 //Mobiel filtermenu klapt in en/of uit
 filterButton.addEventListener('click', function () {
@@ -63,4 +66,9 @@ berichtDisliken.addEventListener('click', function (e) {
 //Als er een bericht wordt geplaatst
 reageren.addEventListener('click', function (e) {
     e.preventDefault();    berichtplaatsen.classList.toggle('berichtplaatsen');
+});
+
+//Zoeken
+zoeken.addEventListener('click', function (e) {
+    e.preventDefault();    zoekbalk.classList.toggle('zoeken');
 });
